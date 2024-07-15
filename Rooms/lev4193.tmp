@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwqvhay7ep7qa"]
+
+[ext_resource type="PackedScene" uid="uid://bd23cwlktsatp" path="res://Objects/mario.tscn" id="1_63ehv"]
+[ext_resource type="Texture2D" uid="uid://dtqg37gbekrj5" path="res://Tilesets/tileset.png" id="2_6q2nq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gcoat"]
+texture = ExtResource("2_6q2nq")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -7, 8, -7, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_g4s4f"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_gcoat")
+
+[node name="LevelTest" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(128, 120)
+zoom = Vector2(2, 2)
+
+[node name="Mario" parent="." instance=ExtResource("1_63ehv")]
+top_level = true
+position = Vector2(56, 201)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_g4s4f")
+format = 2
+layer_0/tile_data = PackedInt32Array(917504, 0, 0, 851968, 0, 0, 851969, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 851974, 0, 0, 851973, 0, 0, 851972, 0, 0, 851971, 0, 0, 851970, 0, 0, 851975, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 851983, 0, 0, 851982, 0, 0, 851981, 0, 0, 851980, 0, 0, 851979, 0, 0, 851978, 0, 0, 851977, 0, 0, 851976, 0, 0, 786432, 65536, 0, 720896, 65536, 0, 720904, 131072, 0, 786440, 131072, 1, 720905, 196608, 0, 786441, 196608, 1, 786447, 65536, 0, 720911, 65536, 0, 655375, 65536, 0, 589839, 65536, 0, 524303, 65536, 0, 458767, 65536, 0, 655360, 65536, 0, 589824, 65536, 0, 524288, 65536, 0, 458752, 65536, 0)

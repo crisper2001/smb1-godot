@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd23cwlktsatp"]
+
+[ext_resource type="Script" path="res://Scripts/mario.gd" id="1_53sp8"]
+[ext_resource type="Texture2D" uid="uid://domouahf364bd" path="res://Sprites/mario_still.png" id="1_ptp5i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fungl"]
+size = Vector2(16, 16)
+
+[node name="Mario" type="CharacterBody2D"]
+script = ExtResource("1_53sp8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ptp5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fungl")
